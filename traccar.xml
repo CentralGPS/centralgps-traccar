@@ -20,6 +20,6 @@
 
     <entry key='database.driver'>[DATABASE_DRIVER]</entry>
     <entry key='database.url'>[DATABASE_URL]</entry>
-    <entry key='database.user'>[DATASBE_USER]</entry>
-    <entry key='database.password'>[DATASBE_PASSWORD]</entry>
+    <entry key='database.user'>[DATABASE_USER]</entry>
+    <entry key='database.password'>[DATABASE_PASSWORD]</entry>
 </properties>
