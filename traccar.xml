@@ -23,5 +23,5 @@
     <entry key='database.user'>[DATABASE_USER]</entry>
     <entry key='database.password'>[DATABASE_PASSWORD]</entry>
     <entry key='web.enable'>true</entry>
-    <entry key='web.old'>true</entry>
+    <entry key='web.old'>false</entry>
 </properties>
