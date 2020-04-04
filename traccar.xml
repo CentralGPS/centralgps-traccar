@@ -22,4 +22,6 @@
     <entry key='database.url'>jdbc:[DATABASE_RDBMS]://[DATABASE_HOST]:[DATABASE_PORT]/[DATABASE][DATABASE_OPTIONS]</entry>
     <entry key='database.user'>[DATABASE_USER]</entry>
     <entry key='database.password'>[DATABASE_PASSWORD]</entry>
+    <entry key='web.enable'>true</entry>
+    <entry key='web.old'>true</entry>
 </properties>

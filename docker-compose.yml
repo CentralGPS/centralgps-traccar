@@ -3,7 +3,7 @@ services:
   traccar-db:
     container_name: traccar-db
     image: postgres:alpine
-    restart: always
+    restart: unless-stopped
     ports:
       - 6543:5432
     volumes:
@@ -15,6 +15,7 @@ services:
   traccar:
     image: traccar/traccar
     container_name: traccar
+    hostname: traccar
     restart: unless-stopped
     depends_on:
       - traccar-db
@@ -31,12 +32,10 @@ services:
     volumes:
       - ./logs:/opt/traccar/logs:rw
       - ./traccar.xml:/opt/traccar/conf/traccar.xml:ro
-    # - /var/docker/traccar/logs:/opt/traccar/logs:rw
-    # - /var/docker/traccar/traccar.xml:/opt/traccar/conf/traccar.xml:ro
     ports:
-      - 5000-5150
-      - 5000-5150/udp
-      - 80:8082
+      - "5000-5150:5000-5150"
+      - "5000-5150:5000-5150/udp"
+      - "80:8082"
 volumes:
   traccardb:
     driver: "local"
