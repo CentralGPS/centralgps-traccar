@@ -32,6 +32,8 @@ services:
     volumes:
       - ./logs:/opt/traccar/logs:rw
       - ./traccar.xml:/opt/traccar/conf/traccar.xml:ro
+      - ./logo.svg:/opt/traccar/web/logo.svg:ro
+      - ./icon.png:/opt/traccar/web/icon.png:ro
     ports:
       - "5000-5150:5000-5150"
       - "5000-5150:5000-5150/udp"
